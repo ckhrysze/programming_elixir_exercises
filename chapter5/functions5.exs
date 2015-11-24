@@ -1,4 +1,5 @@
-# NOTE: IO inspect over puts to see actual values
+# NOTE: IO inspect over puts to see actual values and
+# bypass the attempts to convert to readable characters
 
 orig1 = Enum.map [1,2,3,4], fn x -> x + 2 end
 IO.inspect orig1
