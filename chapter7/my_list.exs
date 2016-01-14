@@ -21,4 +21,13 @@ defmodule MyList do
 	defp _max([_head | tail], high) do
 		_max(tail, high)
 	end
+
+	# ListsAndRecursion-3
+	def caesar([], _), do: []
+	def caesar([head|tail], n) when head+n > 122 do
+		[ head-26+n | caesar(tail, n) ]
+	end
+	def caesar([head|tail], n) do
+		[ head+n | caesar(tail, n) ]
+	end
 end
