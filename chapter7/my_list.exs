@@ -30,4 +30,9 @@ defmodule MyList do
 	def caesar([head|tail], n) do
 		[ head+n | caesar(tail, n) ]
 	end
+
+	# ListsAndRecursion-4
+	def span(to, to), do: [to]
+	def span(from, to) when from > to, do: raise "From cannot be greater than to"
+	def span(from, to), do: [from | span(from+1, to)]
 end
